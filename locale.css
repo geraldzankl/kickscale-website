@@ -50,6 +50,13 @@
 html[lang="de"] .hero h1 > span {
   white-space: normal;
 }
+.hero h1 > span {
+  display: inline-block;
+  max-width: calc(100% / 1.18);
+  letter-spacing: 0;
+  transform: scaleX(1.18);
+  transform-origin: left center;
+}
 html[lang="de"] .dashboard h2 {
   overflow-wrap: anywhere;
 }
