@@ -24,7 +24,7 @@ document.addEventListener("keydown", (event) => {
     menu.focus();
   }
 });
-window.matchMedia("(min-width: 801px)").addEventListener("change", closeMenu);
+window.matchMedia("(min-width: 1001px)").addEventListener("change", closeMenu);
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 function selectTab(selected) {
   tabs.forEach((tab) => {

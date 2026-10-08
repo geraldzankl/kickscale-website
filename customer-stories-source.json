@@ -1,0 +1,141 @@
+{
+  "source": "https://www.kickscale.com/customers",
+  "stories": [
+    {
+      "slug": "fonio-ai",
+      "url": "https://www.kickscale.com/en/customer-stories/fonio-ai",
+      "title": "AI in Sales: How fonio automates HubSpot entries, follow-ups, and international sales coaching",
+      "summary": "How a growing AI telephony scale-up with an international sales team uses automated scorecards and seamless HubSpot synchronization to make sales quality visible.",
+      "category": "Artificial Intelligence",
+      "chips": ["AI phone assistants", "100 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6a54afa2dbb7d74ed094c862_logo.png",
+      "company": "fonio"
+    },
+    {
+      "slug": "lufthansa-city-center",
+      "url": "https://www.kickscale.com/en/customer-stories/lufthansa-city-center",
+      "title": "How Lufthansa City Center turns 2–3-hour partner meetings into strategic market intelligence",
+      "summary": "\"Just start.\" That is all Sebastian Pommerencke would say to anyone still hesitating.",
+      "category": "Travel & Hospitality",
+      "chips": ["Tourism", "50 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2cb441649163c92fdbe0_lufthansa.svg",
+      "company": "Lufthansa City Center"
+    },
+    {
+      "slug": "octonomy",
+      "url": "https://www.kickscale.com/en/customer-stories/octonomy",
+      "title": "\"We can't scale 5x using Excel spreadsheets\": How Octonomy improved forecasting with Kickscale after a €20M investment",
+      "summary": "\"What I was missing most was a cockpit—a single point of truth for everything related to sales,\" recalls Frank (CRO). \"I need a place where I have information about my deals.\"",
+      "category": "Operations",
+      "chips": ["Enterprise AI platform", "90 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6978e136a7aa59632fb71000_octonomy_darkgreen_RGB.avif",
+      "company": "Octonomy"
+    },
+    {
+      "slug": "lime-connect-userlike",
+      "url": "https://www.kickscale.com/en/customer-stories/lime-connect-userlike",
+      "title": "How the Lime Connect sales team reclaimed 195 working days per year with AI",
+      "summary": "Saving 2 hours per employee each week, our 15 sales consultants spend less time on administration and more time closing deals.",
+      "category": "CS & CX Software",
+      "chips": ["", "60 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6911f007c207a1f06714ec28_Lime%20Technologies_idGvRN5l8T_1.svg",
+      "company": "Lime Connect"
+    },
+    {
+      "slug": "cropster",
+      "url": "https://www.kickscale.com/en/customer-stories/cropster",
+      "title": "How Cropster scaled global sales coaching without working 24/7",
+      "summary": "\"I led the European team, which was manageable,\" Martin explains. \"But when my US colleague left in May and I took over globally, I realized I would have to work 24 hours a day to join calls and understand how my team sells across all these time zones.\"",
+      "category": "CS & CX Software",
+      "chips": ["Coffee Technology SaaS", "90 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2f57dc41c93f85409a2b_cropster.avif",
+      "company": "Cropster"
+    },
+    {
+      "slug": "finmatics",
+      "url": "https://www.kickscale.com/en/customer-stories/finmatics",
+      "title": "How Finmatics turned 7 years of wasted data into sales excellence",
+      "summary": "By saving 10% of time per salesperson, creating permanently searchable customer conversations, and generating cross-departmental intelligence for product, sales, and leadership teams",
+      "category": "Finance",
+      "chips": ["", ""],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2dbf0761333186b3089a_Finmatics.svg",
+      "company": "Finmatics"
+    },
+    {
+      "slug": "clockodo",
+      "url": "https://www.kickscale.com/en/customer-stories/clockodo",
+      "title": "More deals, zero typing: How Clockodo reclaims 7 hours a week for real customer conversations",
+      "summary": "German B2B SaaS company Clockodo faced the challenge of managing a growing volume of leads efficiently and in compliance with GDPR. With Kickscale, the team led by Chief Customer Officer Vera Keßler reduced administrative follow-up time per customer call from 30 minutes to a maximum of 10, while simultaneously creating a direct bridge between service and product development.",
+      "category": "HR Software",
+      "chips": ["B2B SaaS / Time tracking software", "40 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6aa289d2f09a69f4dccc2383_Clockodo_blau.png",
+      "company": "Clockodo"
+    },
+    {
+      "slug": "ecdb",
+      "url": "https://www.kickscale.com/en/customer-stories/ecdb",
+      "title": "50% more efficiency in sales with AI",
+      "summary": "\"We are much faster with follow-ups because we have everything directly in the CRM, so we spend very little time trying to remember what the customer actually said.\"",
+      "category": "MarTech",
+      "chips": ["", "50 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2de48e53560e50cb38e2_ECDB.svg",
+      "company": "ECDB"
+    },
+    {
+      "slug": "finway",
+      "url": "https://www.kickscale.com/en/customer-stories/finway",
+      "title": "How finway made its sales process more efficient with AI",
+      "summary": "\"Thanks to Kickscale's automated call summaries and follow-up emails, our sales team spends 60-80% less time on administrative tasks and more time actually selling.\"",
+      "category": "Finance",
+      "chips": ["", "60 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2d71b6a351a271074964_Finway.svg",
+      "company": "finway"
+    },
+    {
+      "slug": "software-sales-formula-jiri",
+      "url": "https://www.kickscale.com/en/customer-stories/software-sales-formula-jiri",
+      "title": "From admin chaos to maximum customer focus: Jiri Siklar's AI strategy",
+      "summary": "With automated note tracking and objective AI coaching, sales reps save massive amounts of time on CRM maintenance and continuously improve their win rates.",
+      "category": "Operations",
+      "chips": ["SaaS & IT, Infrastructure", ""],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/69d8ff6ee438973993851f68_softwaresalesformula.svg",
+      "company": "Software Sales Formula"
+    },
+    {
+      "slug": "atmio",
+      "url": "https://www.kickscale.com/en/customer-stories/atmio",
+      "title": "How Atmio eliminates 2–3 hours of post-meeting work and empowers junior sales from day one",
+      "summary": "\"When I joined Atmio, I said immediately: We need Kickscale.\" Saskia - International Sales Manager",
+      "category": "Green Tech & ESG",
+      "chips": [
+        "Energy (CleanTech / Regulatory Tech)",
+        "30 employees | Startup"
+      ],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/69d9005a9c1b39d45e509c09_atmio.svg",
+      "company": "atmio"
+    },
+    {
+      "slug": "placetel",
+      "url": "https://www.kickscale.com/en/customer-stories/placetel",
+      "title": "How Placetel’s sales team saves 1 to 2 hours per employee every day and uncovers the \"story behind the numbers\"",
+      "summary": "With massive time savings on CRM maintenance and automated AI coaching, Placetel’s 20+ users spend less time on documentation, have accelerated new hire onboarding by 25%, and are turning gut feelings into hard data.",
+      "category": "Operations",
+      "chips": [
+        "Cloud communication (UCaaS/CCaaS)",
+        "approx. 100 employees (approx. 30 in sales)"
+      ],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/69d9000ae141d1327564be65_placetel.svg",
+      "company": "Placetel"
+    },
+    {
+      "slug": "contracthero",
+      "url": "https://www.kickscale.com/en/customer-stories/contracthero",
+      "title": "ContractHero increases its closing rate using Conversation Intelligence",
+      "summary": "More precise insights into sales conversations.",
+      "category": "Finance",
+      "chips": ["", "30 employees"],
+      "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/686d425bd06657e070c2577b_ContractHero.svg",
+      "company": "ContractHero"
+    }
+  ]
+}

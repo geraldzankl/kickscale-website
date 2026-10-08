@@ -1,70 +1,71 @@
 <!doctype html>
+
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#030929" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#030929" name="theme-color" />
     <meta
-      name="description"
       content="Kickscale Trust Center: ISO 27001, Hosting in Frankfurt bei Google Cloud, Datenschutz, AVV, Sicherheitsrichtlinien und KI-Modellinformationen im Überblick."
+      name="description"
     />
-    <meta property="og:title" content="Trust Center | Kickscale" />
+    <meta content="Trust Center | Kickscale" property="og:title" />
     <meta
-      property="og:description"
       content="Datenschutz, Informationssicherheit und KI — Dokumente und Informationen für Ihre Prüfung."
+      property="og:description"
     />
-    <meta property="og:type" content="website" />
+    <meta content="website" property="og:type" />
     <title>Trust Center | Kickscale</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="trust-center.css" />
-    <script src="script.js" defer></script>
-    <script src="trust-center.js" defer></script>
+    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="trust-center.css" rel="stylesheet" />
+    <script defer="" src="script.js"></script>
+    <script defer="" src="trust-center.js"></script>
+    <link href="brand.css" rel="stylesheet" />
   </head>
   <body class="trust-page">
     <a class="skip" href="#main">Zum Inhalt</a>
     <header>
       <div class="container navigation">
-        <a class="logo" href="index.html" aria-label="Kickscale home"
+        <a aria-label="Kickscale home" class="logo" href="index.html"
           ><span aria-hidden="true">k</span>kickscale<span class="logo-dot"
             >.</span
           ></a
         ><button
-          class="menu"
           aria-controls="nav"
           aria-expanded="false"
           aria-label="Open navigation"
+          class="menu"
         >
           <span></span><span></span>
         </button>
-        <nav id="nav" aria-label="Main navigation">
-          <a class="trust-nav" aria-current="page" href="trust-center.html"
+        <nav aria-label="Main navigation" id="nav">
+          <a href="customers.html">Customers</a
+          ><a aria-current="page" class="trust-nav" href="trust-center.html"
             >Trust Center</a
           >
           <a href="index.html#platform">Platform</a
           ><a href="index.html#workflow">How it works</a
-          ><a href="index.html#teams">For your team</a
           ><a class="button small" href="index.html#platform"
             >Explore Kickscale
             <span aria-hidden="true"
               ><svg
-                class="arrow-icon"
-                viewBox="0 0 24 24"
                 aria-hidden="true"
+                class="arrow-icon"
                 fill="none"
+                viewbox="0 0 24 24"
               >
                 <path
                   d="M6 18 18 6M6 6h12v12"
                   stroke="currentColor"
-                  stroke-width="1.7"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg></span
+                  stroke-width="1.7"
+                ></path></svg></span
           ></a>
         </nav>
       </div>
     </header>
-
     <main id="main">
       <section class="trust-hero">
         <div class="container">
@@ -86,20 +87,20 @@
                 >Fragen zum Datenschutz? →</a
               >
             </div>
-            <div class="trust-visual" aria-hidden="true">
+            <div aria-hidden="true" class="trust-visual">
               <div class="trust-ring"></div>
-              <svg class="trust-shield" viewBox="0 0 160 180" fill="none">
+              <svg class="trust-shield" fill="none" viewbox="0 0 160 180">
                 <path
                   d="M80 12 140 35v51c0 40-24 65-60 83-36-18-60-43-60-83V35Z"
                   fill="#030929"
-                />
+                ></path>
                 <path
                   d="m51 88 20 20 39-43"
                   stroke="#2BCCC5"
-                  stroke-width="9"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                />
+                  stroke-width="9"
+                ></path>
               </svg>
               <div class="visual-label">
                 <span></span> ISO 27001 · Zertifizierung
@@ -153,7 +154,7 @@
           </div>
         </aside>
         <div class="trust-content">
-          <section id="overview" class="trust-block">
+          <section class="trust-block" id="overview">
             <p class="eyebrow">01 / AUF EINEN BLICK</p>
             <h2>Für die Fragen,<br />die wirklich zählen.</h2>
             <p class="block-intro">
@@ -163,55 +164,55 @@
             </p>
             <div class="trust-cards">
               <article>
-                <span class="topic-icon" aria-hidden="true">01</span>
+                <span aria-hidden="true" class="topic-icon">01</span>
                 <h3>Datenschutz &amp; AVV</h3>
                 <p>
                   Datenschutzerklärung, Auftragsverarbeitungsvertrag inklusive
                   genehmigter Sub-Auftragsverarbeiter und
                   Datenschutzfolgeabschätzung.
                 </p>
-                <a href="#documents" data-choose-filter="privacy"
+                <a data-choose-filter="privacy" href="#documents"
                   >Datenschutz-Dokumente →</a
                 >
               </article>
               <article>
-                <span class="topic-icon yellow" aria-hidden="true">02</span>
+                <span aria-hidden="true" class="topic-icon yellow">02</span>
                 <h3>Informationssicherheit</h3>
                 <p>
                   ISO 27001 Zertifikat, ISMS-Richtlinien,
                   technisch-organisatorische Maßnahmen und das
                   Eskalationsprotokoll für Sicherheitsvorfälle.
                 </p>
-                <a href="#documents" data-choose-filter="security"
+                <a data-choose-filter="security" href="#documents"
                   >Sicherheits-Dokumente →</a
                 >
               </article>
               <article>
-                <span class="topic-icon red" aria-hidden="true">03</span>
+                <span aria-hidden="true" class="topic-icon red">03</span>
                 <h3>KI &amp; Modelle</h3>
                 <p>
                   Das Kickscale AI Model Statement bietet die dokumentierte
                   Grundlage für Fragen zu den eingesetzten KI-Modellen.
                 </p>
-                <a href="#documents" data-choose-filter="ai"
+                <a data-choose-filter="ai" href="#documents"
                   >AI Model Statement →</a
                 >
               </article>
               <article>
-                <span class="topic-icon" aria-hidden="true">04</span>
+                <span aria-hidden="true" class="topic-icon">04</span>
                 <h3>Hosting &amp; Partner</h3>
                 <p>
                   Kickscale wird bei Google Cloud in Frankfurt gehostet.
                   Vereinbarungen zur Auftragsverarbeitung sind für die
                   aufgeführten Anbieter verfügbar.
                 </p>
-                <a href="#documents" data-choose-filter="processors"
+                <a data-choose-filter="processors" href="#documents"
                   >Partner-Vereinbarungen →</a
                 >
               </article>
             </div>
           </section>
-          <section id="documents" class="trust-block">
+          <section class="trust-block" id="documents">
             <div class="document-heading">
               <div>
                 <p class="eyebrow">02 / DOKUMENTENBIBLIOTHEK</p>
@@ -224,120 +225,120 @@
               finden Sie die jeweiligen Originaldokumente und vollständigen
               Regelungen.
             </p>
-            <div class="document-tools" hidden>
+            <div class="document-tools" hidden="">
               <label for="document-search">Dokument suchen</label
               ><input
-                id="document-search"
-                type="search"
-                placeholder="Zum Beispiel: AVV, ISO, Google …"
                 autocomplete="off"
+                id="document-search"
+                placeholder="Zum Beispiel: AVV, ISO, Google …"
+                type="search"
               />
               <div
+                aria-label="Dokumentkategorie"
                 class="document-filters"
                 role="group"
-                aria-label="Dokumentkategorie"
               >
-                <button type="button" data-filter="all" aria-pressed="true">
+                <button aria-pressed="true" data-filter="all" type="button">
                   Alle <span>17</span></button
                 ><button
-                  type="button"
-                  data-filter="certification"
                   aria-pressed="false"
+                  data-filter="certification"
+                  type="button"
                 >
                   Zertifizierung</button
                 ><button
-                  type="button"
-                  data-filter="privacy"
                   aria-pressed="false"
+                  data-filter="privacy"
+                  type="button"
                 >
                   Datenschutz</button
                 ><button
-                  type="button"
-                  data-filter="security"
                   aria-pressed="false"
+                  data-filter="security"
+                  type="button"
                 >
                   Sicherheit</button
                 ><button
-                  type="button"
-                  data-filter="processors"
                   aria-pressed="false"
+                  data-filter="processors"
+                  type="button"
                 >
                   Sub-Auftragsverarbeiter</button
-                ><button type="button" data-filter="ai" aria-pressed="false">
-                  KI & Modelle</button
+                ><button aria-pressed="false" data-filter="ai" type="button">
+                  KI &amp; Modelle</button
                 ><button
-                  type="button"
-                  data-filter="contracts"
                   aria-pressed="false"
+                  data-filter="contracts"
+                  type="button"
                 >
                   Verträge
                 </button>
               </div>
-              <p id="document-count" role="status" aria-live="polite">
+              <p aria-live="polite" id="document-count" role="status">
                 17 Dokumente
               </p>
             </div>
             <div class="document-list">
               <a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="security"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Sicherheit · PDF</span
                   ><strong>Informations-Sicherheits-Richtlinie</strong
                   ><small>POL-01 ISMS Richtlinie (DE).pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="contracts"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Verträge · Dokument</span
                   ><strong>Allgemeine Geschäftsbedingungen</strong
                   ><small>AGB-Kickscale_DE</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="certification"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
                     >Zertifizierung · Zertifikat</span
@@ -345,73 +346,73 @@
                   ><small>ISO 27001 Zertifikat</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="ai"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
-                    >KI & Modelle · Statement</span
+                    >KI &amp; Modelle · Statement</span
                   ><strong>Kickscale AI Model Statement</strong
                   ><small>Kickscale-AI-Models-Statement</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="privacy"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Datenschutz · PDF</span
                   ><strong>Datenschutzerklärung</strong
                   ><small>Privacy-Clients_DE.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="privacy"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Datenschutz · PDF</span
                   ><strong
@@ -420,24 +421,24 @@
                   ><small>AVV_DE.docx.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="processors"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
                     >Sub-Auftragsverarbeiter · PDF</span
@@ -445,24 +446,24 @@
                   ><small>DPA_AssemblyAI.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="processors"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
                     >Sub-Auftragsverarbeiter · PDF</span
@@ -470,24 +471,24 @@
                   ><small>DPA_Recall.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="processors"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
                     >Sub-Auftragsverarbeiter · PDF</span
@@ -495,24 +496,24 @@
                   ><small>DPA_MicrosoftIreland_2024.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="processors"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
                     >Sub-Auftragsverarbeiter · PDF</span
@@ -520,24 +521,24 @@
                   ><small>DPA_Langfuse_2025-07-10-Public.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="processors"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category"
                     >Sub-Auftragsverarbeiter · PDF</span
@@ -545,72 +546,72 @@
                   ><small>DPA_Google.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="privacy"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Datenschutz · PDF</span
                   ><strong>Datenschutzfolgeabschätzung</strong
                   ><small>Datenschutz-Folgenabschätzung.docx.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="security"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Sicherheit · PDF</span
                   ><strong>Technisch-organisatorische Maßnahmen</strong
                   ><small>5-TOM.docx.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="security"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Sicherheit · PDF</span
                   ><strong>Eskalationsprotokoll für Sicherheitsvorfälle</strong
@@ -619,24 +620,24 @@
                   ></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="security"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Sicherheit · PDF</span
                   ><strong>Informationssicherheitsrichtlinie Kickscale</strong
@@ -645,63 +646,63 @@
                   ></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="security"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Sicherheit · PDF</span
                   ><strong>ISMS Policy — Deutsch</strong
                   ><small>POL-01 ISMS Policy WS_Deutsch.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span></a
+                    ></path></svg></span></a
               ><a
                 class="document-link"
-                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 data-category="contracts"
+                href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
                 ><span class="document-symbol"
-                  ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="M7 3h7l4 4v14H7V3Zm7 0v5h4M10 12h5m-5 4h5"
                       stroke="currentColor"
-                      stroke-width="1.5"
                       stroke-linejoin="round"
-                    /></svg></span
+                      stroke-width="1.5"
+                    ></path></svg></span
                 ><span class="document-text"
                   ><span class="document-category">Verträge · PDF</span
                   ><strong>Gegenseitige Vertraulichkeitsvereinbarung</strong
                   ><small>NDA_DE.pdf</small></span
                 ><span class="document-open"
                   >Im Privacy Center
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                     <path
                       d="m6 18 12-12M6 6h12v12"
                       stroke="currentColor"
                       stroke-width="1.5"
-                    /></svg></span
+                    ></path></svg></span
               ></a>
             </div>
-            <p id="document-empty" hidden>
+            <p hidden="" id="document-empty">
               Keine passenden Dokumente gefunden. Versuchen Sie einen anderen
               Suchbegriff oder wählen Sie „Alle“.
             </p>
@@ -713,15 +714,15 @@
                 ><small
                   >Offizielle Teilnehmerliste · dataprivacyframework.gov</small
                 ></span
-              ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              ><svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                 <path
                   d="m6 18 12-12M6 6h12v12"
                   stroke="currentColor"
                   stroke-width="1.5"
-                /></svg
+                ></path></svg
             ></a>
           </section>
-          <section id="questions" class="trust-block">
+          <section class="trust-block" id="questions">
             <p class="eyebrow">03 / HÄUFIGE FRAGEN</p>
             <h2>Gut zu wissen.</h2>
             <div class="trust-faq">
@@ -775,7 +776,7 @@
               </details>
             </div>
           </section>
-          <section id="contact" class="trust-bottom">
+          <section class="trust-bottom" id="contact">
             <p class="eyebrow">04 / DIREKT IM KONTAKT</p>
             <h2>Ihre Fragen.<br />Unser Team.</h2>
             <p>
@@ -786,12 +787,12 @@
               class="button yellow-button"
               href="mailto:datenschutz@kickscale.com"
               >datenschutz@kickscale.com
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
                 <path
                   d="m6 18 12-12M6 6h12v12"
                   stroke="currentColor"
                   stroke-width="1.5"
-                /></svg></a
+                ></path></svg></a
             ><a
               class="source-link"
               href="https://app.notion.com/p/Kickscale-Privacy-Center-DE-29ab0a72457e80e18879ede407d2ecb1"
@@ -803,7 +804,7 @@
     </main>
     <footer>
       <div class="container footer-top">
-        <a class="logo" href="index.html" aria-label="Kickscale home"
+        <a aria-label="Kickscale home" class="logo" href="index.html"
           ><span aria-hidden="true">k</span>kickscale<span class="logo-dot"
             >.</span
           ></a
@@ -814,6 +815,7 @@
           <a href="index.html#platform">Platform</a
           ><a href="index.html#workflow">How it works</a
           ><a href="index.html#teams">For your team</a>
+          <a href="customers.html">Customers</a>
         </nav>
       </div>
       <div class="container footer-bottom">
