@@ -1,4 +1,11 @@
 @font-face {
+  font-family: Poppins;
+  src: url("assets/fonts/poppins-latin-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
   font-family: Inter;
   src: url("assets/fonts/inter-latin-variable.woff2") format("woff2");
   font-style: normal;
@@ -571,4 +578,37 @@ h1 > span::after {
 /* Keep brand accents legible on the illustration labels. */
 .agent-tag {
   background: #08162d;
+}
+
+/* Confirmed Kickscale brand typography. */
+:root body h1,
+:root body h2,
+:root body h3 {
+  font-family: Poppins, Inter, Arial, sans-serif;
+  font-weight: 800;
+}
+h1 > span,
+h2 em {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+}
+body,
+.intro,
+.customer-intro,
+.trust-intro,
+.article-deck {
+  font-weight: 400;
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: clamp(32px, 9.6vw, 44px);
+  }
+}
+@media (max-width: 480px) {
+  .customers-page .customers-hero h1 {
+    font-size: clamp(32px, 10vw, 44px);
+  }
+  .trust-cards h3 {
+    font-size: clamp(18px, 5vw, 21px);
+  }
 }

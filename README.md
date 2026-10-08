@@ -14,7 +14,7 @@ For Hostinger Web Hosting without Git deployment, upload the HTML, CSS, JavaScri
 
 ## Brand design
 
-The design uses navy `#030929`, turquoise `#2BCCC5`, yellow `#ECE338`, and red `#FF3463`. Shared `brand.css` applies the dark background, translucent cards, and mixed sans-serif/serif headings to every page. Inter and Instrument Serif are self-hosted in `assets/fonts/`, with their licenses included. This pairing was selected to reproduce the supplied screenshot; the original site's font CSS could not be retrieved from its CDN, so the exact brand font identities remain unconfirmed.
+The design uses navy `#030929`, turquoise `#2BCCC5`, yellow `#ECE338`, and red `#FF3463`. Shared `brand.css` applies the dark background, translucent cards, and mixed sans-serif/serif headings to every page. The confirmed brand typography uses Poppins ExtraBold (800) for white headlines, Instrument Serif Regular (400) for turquoise headline accents, and Inter Regular (400) for subtitles and body copy. All three fonts are self-hosted in `assets/fonts/`, with their licenses included.
 
 There are no analytics, cookies, third-party embeds, or externally hosted font/image requests. The product dashboard is labeled as an illustrative sample.
 
