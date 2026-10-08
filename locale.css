@@ -110,6 +110,12 @@ html[lang="de"] .agent-interface strong {
     font-size: 8px;
   }
 }
+.trust-hero h1 > span {
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
 html[lang="de"] .article-hero h1,
 html[lang="de"] .story-card h3,
 html[lang="de"] .related-stories strong {
