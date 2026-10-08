@@ -1,0 +1,44 @@
+# Hostinger Apache / LiteSpeed: clean locale routes and indexing protection.
+DirectoryIndex index.html
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+Options -Indexes -MultiViews
+
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Keep repository/server metadata private while allowing TLS verification.
+  RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F]
+
+  # Redirect old public HTML URLs without changing CSS/JS/font assets.
+  RewriteCond %{THE_REQUEST} "\s/+index\.html(?:[?\s])" [NC]
+  RewriteRule ^index\.html$ /en/ [R=301,L]
+  RewriteCond %{THE_REQUEST} "\s/+trust-center\.html(?:[?\s])" [NC]
+  RewriteRule ^trust-center\.html$ /de/datenschutz [R=301,L]
+  RewriteCond %{THE_REQUEST} "\s/+customers\.html(?:[?\s])" [NC]
+  RewriteRule ^customers\.html$ /en/customers [R=301,L]
+  RewriteCond %{THE_REQUEST} "\s/+stories/[^?\s]+\.html(?:[?\s])" [NC]
+  RewriteRule ^stories/([A-Za-z0-9-]+)\.html$ /en/stories/$1 [R=301,L]
+
+  # Remove direct index.html URLs from localized pages.
+  RewriteCond %{THE_REQUEST} "\s/+((?:en|de)/[^?\s]*?)/index\.html(?:[?\s])" [NC]
+  RewriteRule ^(?:en|de)/ /%1 [R=301,L]
+  RewriteCond %{THE_REQUEST} "\s/+(en|de)/index\.html(?:[?\s])" [NC]
+  RewriteRule ^(?:en|de)/index\.html$ /%1/ [R=301,L]
+
+  RewriteRule ^$ /en/ [R=302,L]
+  RewriteRule ^(en|de)/?$ $1/index.html [END]
+  RewriteRule ^en/trust-center/?$ en/trust-center/index.html [END]
+  RewriteRule ^de/datenschutz/?$ de/datenschutz/index.html [END]
+  RewriteRule ^en/customers/?$ en/customers/index.html [END]
+  RewriteRule ^de/erfolgsgeschichten/?$ de/erfolgsgeschichten/index.html [END]
+  RewriteCond %{DOCUMENT_ROOT}/en/stories/$1/index.html -f
+  RewriteRule ^en/stories/([A-Za-z0-9-]+)/?$ en/stories/$1/index.html [END]
+  RewriteCond %{DOCUMENT_ROOT}/de/erfolgsgeschichten/$1/index.html -f
+  RewriteRule ^de/erfolgsgeschichten/([A-Za-z0-9-]+)/?$ de/erfolgsgeschichten/$1/index.html [END]
+</IfModule>

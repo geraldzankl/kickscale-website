@@ -1,19 +1,19 @@
 "use strict";
 const menu = document.querySelector(".menu");
 const nav = document.getElementById("nav");
+const german = document.documentElement.lang === "de";
+const openLabel = german ? "Navigation öffnen" : "Open navigation";
+const closeLabel = german ? "Navigation schließen" : "Close navigation";
 function closeMenu() {
   nav.classList.remove("open");
   menu.setAttribute("aria-expanded", "false");
-  menu.setAttribute("aria-label", "Open navigation");
+  menu.setAttribute("aria-label", openLabel);
 }
 menu.addEventListener("click", () => {
   const open = menu.getAttribute("aria-expanded") !== "true";
   nav.classList.toggle("open", open);
   menu.setAttribute("aria-expanded", String(open));
-  menu.setAttribute(
-    "aria-label",
-    open ? "Close navigation" : "Open navigation",
-  );
+  menu.setAttribute("aria-label", open ? closeLabel : openLabel);
 });
 nav.addEventListener("click", (event) => {
   if (event.target.closest("a")) closeMenu();

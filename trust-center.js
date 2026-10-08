@@ -6,18 +6,19 @@ const documents = [
   ...document.querySelectorAll(".document-list .document-link"),
 ];
 let category = "all";
+const locale = document.documentElement.lang === "de" ? "de" : "en";
 function updateDocuments() {
-  const query = search.value.trim().toLocaleLowerCase("de");
+  const query = search.value.trim().toLocaleLowerCase(locale);
   let count = 0;
   documents.forEach((document) => {
     const visible =
       (category === "all" || document.dataset.category === category) &&
-      document.textContent.toLocaleLowerCase("de").includes(query);
+      document.textContent.toLocaleLowerCase(locale).includes(query);
     document.hidden = !visible;
     if (visible) count++;
   });
   document.getElementById("document-count").textContent =
-    `${count} ${count === 1 ? "Dokument" : "Dokumente"}`;
+    `${count} ${locale === "de" ? (count === 1 ? "Dokument" : "Dokumente") : count === 1 ? "document" : "documents"}`;
   document.getElementById("document-empty").hidden = count !== 0;
   filters.forEach((button) =>
     button.setAttribute(

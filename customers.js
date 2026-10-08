@@ -4,6 +4,7 @@ const storySearch = document.getElementById("story-search");
 const storyFilters = [...document.querySelectorAll("[data-filter]")];
 const storyCards = [...document.querySelectorAll(".story-card")];
 let storyCategory = "all";
+const storyLocale = document.documentElement.lang === "de" ? "de" : "en";
 function filterStories() {
   const query = storySearch.value.trim().toLocaleLowerCase();
   let count = 0;
@@ -21,7 +22,7 @@ function filterStories() {
     ),
   );
   document.getElementById("story-count").textContent =
-    `${count} ${count === 1 ? "story" : "stories"}`;
+    `${count} ${storyLocale === "de" ? (count === 1 ? "Geschichte" : "Geschichten") : count === 1 ? "story" : "stories"}`;
   document.getElementById("story-empty").hidden = count !== 0;
 }
 storySearch.addEventListener("input", filterStories);

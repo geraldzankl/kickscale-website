@@ -1,0 +1,5 @@
+# Crawling is allowed so search engines can read the noindex directive.
+# Every HTML page has a robots noindex tag. Apache/LiteSpeed also sends
+# X-Robots-Tag: noindex, nofollow, noarchive for every response.
+User-agent: *
+Allow: /

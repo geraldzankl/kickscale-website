@@ -9,7 +9,8 @@
       "category": "Artificial Intelligence",
       "chips": ["AI phone assistants", "100 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6a54afa2dbb7d74ed094c862_logo.png",
-      "company": "fonio"
+      "company": "fonio",
+      "german_source_url": "https://www.kickscale.com/customer-stories/fonio-ai"
     },
     {
       "slug": "lufthansa-city-center",
@@ -19,7 +20,8 @@
       "category": "Travel & Hospitality",
       "chips": ["Tourism", "50 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2cb441649163c92fdbe0_lufthansa.svg",
-      "company": "Lufthansa City Center"
+      "company": "Lufthansa City Center",
+      "german_source_url": "https://www.kickscale.com/customer-stories/lufthansa-city-center"
     },
     {
       "slug": "octonomy",
@@ -29,7 +31,8 @@
       "category": "Operations",
       "chips": ["Enterprise AI platform", "90 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6978e136a7aa59632fb71000_octonomy_darkgreen_RGB.avif",
-      "company": "Octonomy"
+      "company": "Octonomy",
+      "german_source_url": "https://www.kickscale.com/customer-stories/octonomy"
     },
     {
       "slug": "lime-connect-userlike",
@@ -39,7 +42,8 @@
       "category": "CS & CX Software",
       "chips": ["", "60 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6911f007c207a1f06714ec28_Lime%20Technologies_idGvRN5l8T_1.svg",
-      "company": "Lime Connect"
+      "company": "Lime Connect",
+      "german_source_url": "https://www.kickscale.com/customer-stories/lime-connect-userlike"
     },
     {
       "slug": "cropster",
@@ -49,7 +53,8 @@
       "category": "CS & CX Software",
       "chips": ["Coffee Technology SaaS", "90 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2f57dc41c93f85409a2b_cropster.avif",
-      "company": "Cropster"
+      "company": "Cropster",
+      "german_source_url": "https://www.kickscale.com/customer-stories/cropster"
     },
     {
       "slug": "finmatics",
@@ -59,7 +64,8 @@
       "category": "Finance",
       "chips": ["", ""],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2dbf0761333186b3089a_Finmatics.svg",
-      "company": "Finmatics"
+      "company": "Finmatics",
+      "german_source_url": "https://www.kickscale.com/customer-stories/finmatics"
     },
     {
       "slug": "clockodo",
@@ -69,7 +75,8 @@
       "category": "HR Software",
       "chips": ["B2B SaaS / Time tracking software", "40 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/6aa289d2f09a69f4dccc2383_Clockodo_blau.png",
-      "company": "Clockodo"
+      "company": "Clockodo",
+      "german_source_url": "https://www.kickscale.com/customer-stories/clockodo"
     },
     {
       "slug": "ecdb",
@@ -79,7 +86,8 @@
       "category": "MarTech",
       "chips": ["", "50 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2de48e53560e50cb38e2_ECDB.svg",
-      "company": "ECDB"
+      "company": "ECDB",
+      "german_source_url": "https://www.kickscale.com/customer-stories/ecdb"
     },
     {
       "slug": "finway",
@@ -89,7 +97,8 @@
       "category": "Finance",
       "chips": ["", "60 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/694a2d71b6a351a271074964_Finway.svg",
-      "company": "finway"
+      "company": "finway",
+      "german_source_url": "https://www.kickscale.com/customer-stories/finway"
     },
     {
       "slug": "software-sales-formula-jiri",
@@ -99,7 +108,8 @@
       "category": "Operations",
       "chips": ["SaaS & IT, Infrastructure", ""],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/69d8ff6ee438973993851f68_softwaresalesformula.svg",
-      "company": "Software Sales Formula"
+      "company": "Software Sales Formula",
+      "german_source_url": "https://www.kickscale.com/customer-stories/software-sales-formula-jiri"
     },
     {
       "slug": "atmio",
@@ -112,7 +122,8 @@
         "30 employees | Startup"
       ],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/69d9005a9c1b39d45e509c09_atmio.svg",
-      "company": "atmio"
+      "company": "atmio",
+      "german_source_url": "https://www.kickscale.com/customer-stories/atmio"
     },
     {
       "slug": "placetel",
@@ -125,7 +136,8 @@
         "approx. 100 employees (approx. 30 in sales)"
       ],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/69d9000ae141d1327564be65_placetel.svg",
-      "company": "Placetel"
+      "company": "Placetel",
+      "german_source_url": "https://www.kickscale.com/customer-stories/placetel"
     },
     {
       "slug": "contracthero",
@@ -135,7 +147,9 @@
       "category": "Finance",
       "chips": ["", "30 employees"],
       "logo": "https://cdn.prod.website-files.com/6863825d62dfc36734416c1c/686d425bd06657e070c2577b_ContractHero.svg",
-      "company": "ContractHero"
+      "company": "ContractHero",
+      "german_source_url": "https://www.kickscale.com/customer-stories/contracthero"
     }
-  ]
+  ],
+  "german_collection_source": "https://www.kickscale.com/erfolgsgeschichten"
 }

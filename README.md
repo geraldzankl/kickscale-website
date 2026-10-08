@@ -1,29 +1,40 @@
 # Kickscale website
 
-Responsive static marketing website with a homepage, customer stories, and German Trust Center. No installation or build step is needed.
+Static bilingual website: English and German, official Kickscale logo, Trust Center, and customer stories. No dependency installation or production build is required.
+
+## Pages and navigation
+
+- `/en/` and `/de/`: localized homepages.
+- `/en/trust-center` and `/de/datenschutz`: equivalent localized Trust Center pages.
+- `/en/customers` and `/de/erfolgsgeschichten`: customer story collections.
+- `/en/stories/<slug>` and `/de/erfolgsgeschichten/<slug>`: individual stories.
+
+Header and footer menus contain only Home / Startseite and Trust Center. The DE/EN switch opens the equivalent page, including individual customer stories. The original English and German article text comes from Kickscale's existing public site. Trust Center descriptions are translated; the original policy file names and source links remain intact.
+
+## Hosting and deployment
+
+Repository: `geraldzankl/kickscale-website`. Branch: `main`. Publish the repository root, with no build command. Intended live domain: `www.kickscale.si`.
+
+Hostinger Apache/LiteSpeed uses the included `.htaccess` to serve clean paths without `.html` or a required trailing slash, redirect legacy HTML URLs, and send indexing headers. Directory-based `index.html` pages also support static hosts that do not process `.htaccess`; those hosts may append a trailing slash. Legacy HTML files include browser redirects to clean routes as a fallback.
+
+For manual deployment, upload the locale folders, `assets/`, all CSS/JS files, `favicon.svg`, `robots.txt`, `.htaccess`, and the root/legacy HTML files, preserving paths. Include hidden files: `.htaccess` is essential for Apache/LiteSpeed routing and headers. Enable SSL in hPanel. A Git push updates the live site only when Hostinger automatic deployment is configured; otherwise redeploy the `main` branch in Hostinger.
+
+## Search indexing
+
+Every HTML page includes `noindex, nofollow, noarchive`. `.htaccess` additionally sets `X-Robots-Tag: noindex, nofollow, noarchive` on all Apache/LiteSpeed responses. `robots.txt` allows crawling so search engines can discover and respect the noindex directive; blocking crawling would prevent them from reading it. No sitemap is published.
+
+These directives request exclusion from compliant search engines; the website remains publicly accessible. They are not access control. Pages previously indexed may take time to disappear; use the relevant search engine removal tools for urgent removals. Verify the noindex metadata and headers on the live Hostinger site after deployment, since static/CDN hosts may ignore `.htaccess`.
+
+## Brand assets and fonts
+
+The header, footer, dashboard, and favicon use the original Kickscale vector artwork retrieved from its public website. The original white wordmark is stored in `assets/logos/kickscale-white.svg`; the favicon uses its original symbol path and gradient.
+
+Brand colors: navy `#030929`, turquoise `#2BCCC5`, yellow `#ECE338`, red `#FF3463`. Confirmed fonts: Poppins ExtraBold (800), Instrument Serif Regular (400) for turquoise accents, Inter Regular (400) for subtitles and body copy. Fonts are self-hosted with their licenses in `assets/fonts/`. No analytics, cookies, external asset requests, or third-party embeds are used.
+
+## Trust Center content
+
+The 17-document library provides localized search and filtering, FAQs, Google Cloud hosting information for Frankfurt, and `datenschutz@kickscale.com`. Document entries open the supplied Notion Privacy Center because individual file URLs were not provided. See `trust-center-content-source.md` for provenance. An English overview does not imply that the original policy documents are available in English.
 
 ## Local development
 
-Run `python3 -m http.server 8080` from the repository root. All public pages and assets are static files.
-
-## Hostinger
-
-Use repository `geraldzankl/kickscale-website`, branch `main`, and the repository root as the publish directory. No build command is required. The entry point is `index.html`.
-
-For Hostinger Web Hosting without Git deployment, upload the HTML, CSS, JavaScript, favicon, `assets/`, and `stories/` into the domain's `public_html` directory, preserving relative paths. Replace the default hosting index file if present. Configure the domain and SSL in hPanel. A Git push updates the repository; it updates the live site only when automatic deployment is configured.
-
-## Brand design
-
-The design uses navy `#030929`, turquoise `#2BCCC5`, yellow `#ECE338`, and red `#FF3463`. Shared `brand.css` applies the dark background, translucent cards, and mixed sans-serif/serif headings to every page. The confirmed brand typography uses Poppins ExtraBold (800) for white headlines, Instrument Serif Regular (400) for turquoise headline accents, and Inter Regular (400) for subtitles and body copy. All three fonts are self-hosted in `assets/fonts/`, with their licenses included.
-
-There are no analytics, cookies, third-party embeds, or externally hosted font/image requests. The product dashboard is labeled as an illustrative sample.
-
-## Customer stories
-
-`customers.html` provides search and industry filtering for 13 stories. The full article text is available locally under `stories/`. Content was retrieved from `https://www.kickscale.com/customers` and its linked English customer stories. `customer-stories-source.json` records the source URLs and original summaries. Customer results retain their individual context; they are not presented as performance guarantees. Source images and video embeds are omitted; company names are displayed as text. The articles and collection remain readable without JavaScript.
-
-## Trust Center
-
-`trust-center.html` contains a German overview of privacy, information security, hosting, AI models, and contracts. The 17-document library supports category filtering and search; it remains readable without JavaScript. FAQs use native expandable details. Document entries open the supplied Notion Privacy Center because individual file URLs were not provided. The contact address is `datenschutz@kickscale.com`.
-
-Content provenance and the source inventory are recorded in `trust-center-content-source.md`. Hosting and certification information reflects the content supplied by the repository owner; certificate validity and the individual documents have not been independently checked.
+Run `python3 -m http.server 8080` from the repository root. Directory-based routes work with trailing slashes; Apache/LiteSpeed is needed to exercise `.htaccess` redirects and response headers. Edit the static locale files directly; keep equivalent language pages and switches synchronized.
