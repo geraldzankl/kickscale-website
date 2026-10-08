@@ -1227,3 +1227,28 @@ h1 > span::after {
 .team-grid article > span {
   display: inline-flex;
 }
+
+/* Direct access to the existing privacy center. */
+.navigation nav .trust-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b7c2d2;
+  border-radius: 8px;
+  padding: 12px 15px;
+  white-space: nowrap;
+}
+.navigation nav .trust-nav:hover {
+  color: var(--navy);
+  border-color: #087c78;
+  background: #2bccc512;
+}
+@media (min-width: 801px) and (max-width: 1100px) {
+  .navigation nav {
+    gap: 15px;
+  }
+  .navigation nav .button.small {
+    padding: 14px;
+    gap: 10px;
+  }
+}
