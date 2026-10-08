@@ -27,7 +27,7 @@ These directives request exclusion from compliant search engines; the website re
 
 ## Brand assets and fonts
 
-The header, footer, dashboard, and favicon use the original Kickscale vector artwork retrieved from its public website. The original white wordmark is stored in `assets/logos/kickscale-white.svg`; the favicon uses its original symbol path and gradient.
+The header, footer, dashboard, and favicon use the original Kickscale vector artwork retrieved from its public website. The original white wordmark is stored in `assets/logos/kickscale-white.svg`; the favicon at `assets/logos/kickscale-favicon.svg` uses its original symbol path and gradient. A distinct asset URL prevents reuse of the old cached favicon.
 
 Brand colors: navy `#030929`, turquoise `#2BCCC5`, yellow `#ECE338`, red `#FF3463`. Confirmed fonts: Poppins ExtraBold (800), Instrument Serif Regular (400) for turquoise accents, Inter Regular (400) for subtitles and body copy. Fonts are self-hosted with their licenses in `assets/fonts/`. No analytics, cookies, external asset requests, or third-party embeds are used.
 
