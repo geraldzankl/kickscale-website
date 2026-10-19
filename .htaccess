@@ -1,44 +1,34 @@
-# Hostinger Apache / LiteSpeed: clean locale routes and indexing protection.
-DirectoryIndex index.html
-<IfModule mod_dir.c>
-  DirectorySlash Off
-</IfModule>
+# Hostinger Apache/LiteSpeed: public hub, non-indexed subpages.
 Options -Indexes -MultiViews
+DirectoryIndex index.html
+DirectorySlash Off
+ErrorDocument 404 "Nicht gefunden."
+ErrorDocument 410 "Diese Seite ist nicht mehr verfuegbar."
 
 <IfModule mod_headers.c>
-  Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+  Header always set X-Kickscale-Site "resource-hub-20261019-r1"
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+  Header always set X-Robots-Tag "index, follow" "expr=%{THE_REQUEST} =~ m#^[A-Z]+ /(?:\?[^ ]*)? HTTP/#"
+  Header always set Referrer-Policy "no-referrer"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Cache-Control "no-store"
 </IfModule>
 
-<IfModule mod_rewrite.c>
-  RewriteEngine On
+RewriteEngine On
+RewriteRule ^\.well-known/acme-challenge/[A-Za-z0-9_-]+$ - [END]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?kickscale\.si$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+RewriteRule ^ https://kickscale.si%{REQUEST_URI} [R=308,END]
 
-  # Keep repository/server metadata private while allowing TLS verification.
-  RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F]
-
-  # Redirect old public HTML URLs without changing CSS/JS/font assets.
-  RewriteCond %{THE_REQUEST} "\s/+index\.html(?:[?\s])" [NC]
-  RewriteRule ^index\.html$ /en/ [R=301,L]
-  RewriteCond %{THE_REQUEST} "\s/+trust-center\.html(?:[?\s])" [NC]
-  RewriteRule ^trust-center\.html$ /de/datenschutz [R=301,L]
-  RewriteCond %{THE_REQUEST} "\s/+customers\.html(?:[?\s])" [NC]
-  RewriteRule ^customers\.html$ /en/customers [R=301,L]
-  RewriteCond %{THE_REQUEST} "\s/+stories/[^?\s]+\.html(?:[?\s])" [NC]
-  RewriteRule ^stories/([A-Za-z0-9-]+)\.html$ /en/stories/$1 [R=301,L]
-
-  # Remove direct index.html URLs from localized pages.
-  RewriteCond %{THE_REQUEST} "\s/+((?:en|de)/[^?\s]*?)/index\.html(?:[?\s])" [NC]
-  RewriteRule ^(?:en|de)/ /%1 [R=301,L]
-  RewriteCond %{THE_REQUEST} "\s/+(en|de)/index\.html(?:[?\s])" [NC]
-  RewriteRule ^(?:en|de)/index\.html$ /%1/ [R=301,L]
-
-  RewriteRule ^$ /en/ [R=302,L]
-  RewriteRule ^(en|de)/?$ $1/index.html [END]
-  RewriteRule ^en/trust-center/?$ en/trust-center/index.html [END]
-  RewriteRule ^de/datenschutz/?$ de/datenschutz/index.html [END]
-  RewriteRule ^en/customers/?$ en/customers/index.html [END]
-  RewriteRule ^de/erfolgsgeschichten/?$ de/erfolgsgeschichten/index.html [END]
-  RewriteCond %{DOCUMENT_ROOT}/en/stories/$1/index.html -f
-  RewriteRule ^en/stories/([A-Za-z0-9-]+)/?$ en/stories/$1/index.html [END]
-  RewriteCond %{DOCUMENT_ROOT}/de/erfolgsgeschichten/$1/index.html -f
-  RewriteRule ^de/erfolgsgeschichten/([A-Za-z0-9-]+)/?$ de/erfolgsgeschichten/$1/index.html [END]
-</IfModule>
+RewriteRule ^$ index.html [END]
+RewriteRule ^index\.html$ / [R=302,END]
+RewriteRule ^(?:hub\.(?:css|js)|robots\.txt|sitemap\.xml)$ - [END]
+RewriteRule ^assets/fonts/(?:poppins-latin-800|instrument-serif-latin|inter-latin-variable)\.woff2$ - [END]
+RewriteRule ^assets/logos/(?:kickscale-white|kickscale-favicon)\.svg$ - [END]
+# Only a matching entry in the host-private room map grants access.
+RewriteRule ^[A-Z][A-Z0-9-]{1,30}_[a-f0-9]{64}/?$ private-room.php [END]
+RewriteRule ^private-room\.php$ - [END]
+# Retire previous public pages, downloads and repository metadata.
+RewriteRule ^ - [G,END]

@@ -1,5 +1,6 @@
-# Crawling is allowed so search engines can read the noindex directive.
-# Every HTML page has a robots noindex tag. Apache/LiteSpeed also sends
-# X-Robots-Tag: noindex, nofollow, noarchive for every response.
 User-agent: *
 Allow: /
+
+# Crawlers must read non-public pages' noindex responses.
+# Never list private links here or in the sitemap.
+Sitemap: https://kickscale.si/sitemap.xml
