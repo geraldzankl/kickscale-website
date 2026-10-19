@@ -6,7 +6,7 @@ ErrorDocument 404 "Nicht gefunden."
 ErrorDocument 410 "Diese Seite ist nicht mehr verfuegbar."
 
 <IfModule mod_headers.c>
-  Header always set X-Kickscale-Site "resource-hub-20261019-r1"
+  Header always set X-Kickscale-Site "resource-hub-20261019-r2"
   Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
   Header always set X-Robots-Tag "index, follow" "expr=%{THE_REQUEST} =~ m#^[A-Z]+ /(?:\?[^ ]*)? HTTP/#"
   Header always set Referrer-Policy "no-referrer"
@@ -27,7 +27,13 @@ RewriteRule ^index\.html$ / [R=302,END]
 RewriteRule ^(?:hub\.(?:css|js)|robots\.txt|sitemap\.xml)$ - [END]
 RewriteRule ^assets/fonts/(?:poppins-latin-800|instrument-serif-latin|inter-latin-variable)\.woff2$ - [END]
 RewriteRule ^assets/logos/(?:kickscale-white|kickscale-favicon)\.svg$ - [END]
-# Only a matching entry in the host-private room map grants access.
+
+# Owner-approved repository-hosted sales room. It is not authenticated/private.
+# Direct index.html requests use the same unlisted clean URL.
+RewriteRule ^(XING_d514c695d2997cc1830cf6d4e3f282bb03ccc8a3665b27035cfc55cdebdca9c2)/index\.html$ /$1 [R=302,END]
+RewriteRule ^(XING_d514c695d2997cc1830cf6d4e3f282bb03ccc8a3665b27035cfc55cdebdca9c2)/?$ $1/index.html [END]
+
+# Retain the host-only handler for any separately configured private rooms.
 RewriteRule ^[A-Z][A-Z0-9-]{1,30}_[a-f0-9]{64}/?$ private-room.php [END]
 RewriteRule ^private-room\.php$ - [END]
 # Retire previous public pages, downloads and repository metadata.

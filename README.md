@@ -1,35 +1,37 @@
-# Kickscale resource hub
+# Kickscale resource hub and unlisted sales room
 
-Public homepage for https://kickscale.si/ with German/English switching. It links to the official website, free trial, general Sales Room (DE/EN), customer case studies, integrations, Help Center, Trust Center (DE/EN), YouTube, and the sales contact. The contact block uses the phone number and Vienna address published on kickscale.com/impressum.
+Public homepage at https://kickscale.si/ with German/English switching. It links to the official website, free trial, general Sales Room (DE/EN), customer case studies, integrations, Help Center, Trust Center (DE/EN), YouTube and sales contact. The public homepage is unchanged by this update.
 
 ## Publish
 
-Target: Hostinger Apache/LiteSpeed, repository root, branch main, no build step. PHP 8.1+ is required only for private rooms. Keep the hidden .htaccess file in the document root. Existing assets/ is preserved unchanged, including the official logos and self-hosted Poppins, Instrument Serif and Inter fonts. There are no analytics, embedded videos or third-party asset loads.
+Target: Hostinger Apache/LiteSpeed. Repository: geraldzankl/kickscale-website. Branch: main. Publish the repository root; no build step. Include the root .htaccess and the sales room directory, including its .htaccess and index.html. The XING room is now a static page deployed with the rest of the repository: it does NOT require PHP, a private server directory, rooms.json, or a separate manual content upload.
 
-A Git push is not proof of live publication. It triggers the site only if Hostinger automatic Git deployment is configured. Otherwise deploy main using this site's Git deployment in hPanel. Purge old host/CDN cache and verify the live responses. The root carries build marker resource-hub-20261019-r1 in the X-Kickscale-Site header.
+The existing assets directory is preserved, including official logos and Poppins, Instrument Serif and Inter. Pages have no analytics or third-party embedded players. PHP 8.1+ is only needed for the optional legacy host-only handler described below.
+
+A Git push is not proof of live publication. It triggers publication only if Hostinger automatic Git deployment is configured. Otherwise deploy main through the site's Git deployment in hPanel. Purge old host/CDN caches and verify live responses. X-Kickscale-Site identifies this revision as resource-hub-20261019-r2. The XING HTML has build-id xing-sales-room-20261019-r2.
+
+## Public repository authorization
+
+On 19 October 2026, the owner explicitly authorized uploading the prepared XING customer-facing page to this public GitHub repository, even though it would be visible here. Only that finished German page is included. Raw meeting transcripts, recording links, PINs, the source PDF, deal financials, internal research notes and the private hosting package are NOT included.
+
+The XING directory name and its page contents can be discovered in this public repository and its commit history. The random URL is therefore an unlisted link, NOT an access-control mechanism. No promise of confidentiality, employee-only access, or invisibility on the internet is made. Noindex on kickscale.si cannot control indexing of GitHub's own pages. Removing content from a future commit does not erase existing history or copies.
 
 ## Indexing and routes
 
-Only / (including its language query string) is indexable and appears in sitemap.xml. The homepage uses index,follow in HTML and the HTTP header. German is default; English is ?lang=en with a root canonical. Every other route receives noindex,nofollow,noarchive,nosnippet. Private-room HTML must repeat the noindex meta directive.
+Only / (including its language query string) is indexable and appears in sitemap.xml. It uses index,follow in HTML and the HTTP header. German is default; English is ?lang=en with a root canonical. The homepage, navigation, sitemap and robots.txt do not link to the XING room.
 
-robots.txt allows crawling so search engines can read noindex. Do not block those pages from crawling and do not disclose private URLs in robots.txt or sitemap.xml. Noindex is not access control and cannot guarantee compliance by every crawler. Existing listings can require recrawling or removal requests.
+The XING route returns its German static HTML with noindex,nofollow,noarchive,nosnippet in HTML and HTTP headers, no-store and no-referrer. Direct index.html requests redirect to its clean URL. The child .htaccess adds a restrictive content security policy and disables caching. Other subpages retain noindex headers. These are requests to compliant crawlers, not authentication or a guarantee of removal from all search engines.
 
-Old /de/, /en/, legacy HTML/PDF and unlisted paths return 410. Incorrect or unconfigured private links return 404, never homepage content. A backup of the previous site is at backup-before-private-room-20261019. Restoring it reopens the old routes.
+robots.txt permits crawling so search engines can read noindex responses. The sitemap lists only the root. Old /de/, /en/, legacy HTML/PDF files and unlisted legacy routes return 410. Unknown room tokens fall through to the existing host-only handler, which returns 404 unless separately configured. The old site backup is backup-before-private-room-20261019; restoring it reopens old routes.
 
-The root header exception uses THE_REQUEST rather than REQUEST_URI to survive Apache's internal rewrite to index.html. Test the live header for both root and a private URL after deployment.
+The root indexing exception uses THE_REQUEST so it survives Apache's internal rewrite to index.html. Do not add a host-wide noindex override that also blocks the public root. A host-wide CDN cache must not override room no-store headers.
 
-## Host-only private rooms
+## Optional host-only rooms
 
-This repository is public. Do not commit customer meeting content, transcripts, PDF exports, room HTML, access links or tokens here. private-room.php is a generic server-side handler; it contains no customer data or private URL. It fails closed until the host-only room configuration has been installed.
+The existing private-room.php remains for separately configured rooms. It uses KICKSCALE_PRIVATE_DIR or a kickscale-private directory next to the document root, with a host-only rooms.json mapping route hashes to random HTML files. This mechanism is NOT used for the owner-approved repository-hosted XING page. Do not upload other customer data or credentials without authorization.
 
-Create a directory named kickscale-private next to the document root, outside the public directory and Git checkout. Alternatively set KICKSCALE_PRIVATE_DIR to an absolute private path. Its rooms.json maps SHA-256 hashes of complete route slugs to random 32-hex-character .html filenames in that same private directory. Provision this directory via the authorized hosting/file-transfer connection, not via the public Git repository. Restrict filesystem permissions to the hosting account; PHP must be able to read it. Merge new room mappings rather than overwrite existing ones.
+## Verification
 
-A room slug follows CLIENT_ plus a cryptographically random 64-hex-character token. Publish only the resulting private link to the intended recipients. Do not put it in public navigation, source, sitemap, analytics or issue trackers. The handler sends no-store, no-referrer, noindex and a restrictive CSP. The HTML may load only the site's styles, logos and fonts, with no scripts or third-party embeds. Host/CDN access logs may still contain private paths; restrict log access.
+Root: 200, index/follow, resource-hub-20261019-r2 header. XING route: 200, noindex, no-store, expected HTML build marker; both clean and trailing-slash routes work. Its explicit index.html route redirects to the clean URL. Wrong route: no room content. Previous public pages: 410. Root sitemap has no room URLs. Check fonts, logo, CSS, all outbound links and responsive layout.
 
-The link is a bearer capability, not an authenticated identity. Anyone holding it can open and forward it. For employee-only access use a separate authentication policy. To revoke a URL remove its entry from the host-private map and purge any cache.
-
-## Deployment checks
-
-Root: HTTP 200 and X-Robots-Tag index,follow. Configured private link: HTTP 200 and noindex plus no-store. Wrong private link: 404. Old pages and repository metadata: 410. Sitemap: root only. Check logo/fonts/CSS/JS, all outbound links, mobile layout and DE/EN switch.
-
-Some requested destination URLs could not be retrieved by the research environment; those URLs were preserved as supplied, not silently replaced. Verify their redirects in the live browser. Production fonts remain the originals; offline previews use fallback fonts rather than distribute font binaries.
+The committed files are deployment-ready; successful live checks, not just a commit, are required before calling a release verified live.
