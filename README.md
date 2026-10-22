@@ -1,37 +1,40 @@
-# Kickscale resource hub and unlisted sales room
+# Kickscale website
 
-Public homepage at https://kickscale.si/ with German/English switching. It links to the official website, free trial, general Sales Room (DE/EN), customer case studies, integrations, Help Center, Trust Center (DE/EN), YouTube and sales contact. The public homepage is unchanged by this update.
+Static bilingual website: English and German, official Kickscale logo, Trust Center, and customer stories. No dependency installation or production build is required.
 
-## Publish
+## Pages and navigation
 
-Target: Hostinger Apache/LiteSpeed. Repository: geraldzankl/kickscale-website. Branch: main. Publish the repository root; no build step. Include the root .htaccess and the sales room directory, including its .htaccess and index.html. The XING room is now a static page deployed with the rest of the repository: it does NOT require PHP, a private server directory, rooms.json, or a separate manual content upload.
+- `/en/` and `/de/`: localized homepages.
+- `/en/trust-center` and `/de/datenschutz`: equivalent localized Trust Center pages.
+- `/en/customers` and `/de/erfolgsgeschichten`: customer story collections.
+- `/en/stories/<slug>` and `/de/erfolgsgeschichten/<slug>`: individual stories.
 
-The existing assets directory is preserved, including official logos and Poppins, Instrument Serif and Inter. Pages have no analytics or third-party embedded players. PHP 8.1+ is only needed for the optional legacy host-only handler described below.
+Header and footer menus contain only Home / Startseite and Trust Center. The DE/EN switch opens the equivalent page, including individual customer stories. The original English and German article text comes from Kickscale's existing public site. Trust Center descriptions are translated; the original policy file names and source links remain intact.
 
-A Git push is not proof of live publication. It triggers publication only if Hostinger automatic Git deployment is configured. Otherwise deploy main through the site's Git deployment in hPanel. Purge old host/CDN caches and verify live responses. X-Kickscale-Site identifies this revision as resource-hub-20261019-r2. The XING HTML has build-id xing-sales-room-20261019-r2.
+## Hosting and deployment
 
-## Public repository authorization
+Repository: `geraldzankl/kickscale-website`. Branch: `main`. Publish the repository root, with no build command. Intended live domain: `www.kickscale.si`.
 
-On 19 October 2026, the owner explicitly authorized uploading the prepared XING customer-facing page to this public GitHub repository, even though it would be visible here. Only that finished German page is included. Raw meeting transcripts, recording links, PINs, the source PDF, deal financials, internal research notes and the private hosting package are NOT included.
+Hostinger Apache/LiteSpeed uses the included `.htaccess` to serve clean paths without `.html` or a required trailing slash, redirect legacy HTML URLs, and send indexing headers. Directory-based `index.html` pages also support static hosts that do not process `.htaccess`; those hosts may append a trailing slash. Legacy HTML files include browser redirects to clean routes as a fallback.
 
-The XING directory name and its page contents can be discovered in this public repository and its commit history. The random URL is therefore an unlisted link, NOT an access-control mechanism. No promise of confidentiality, employee-only access, or invisibility on the internet is made. Noindex on kickscale.si cannot control indexing of GitHub's own pages. Removing content from a future commit does not erase existing history or copies.
+For manual deployment, upload the locale folders, `assets/`, all CSS/JS files, `favicon.svg`, `robots.txt`, `.htaccess`, and the root/legacy HTML files, preserving paths. Include hidden files: `.htaccess` is essential for Apache/LiteSpeed routing and headers. Enable SSL in hPanel. A Git push updates the live site only when Hostinger automatic deployment is configured; otherwise redeploy the `main` branch in Hostinger.
 
-## Indexing and routes
+## Search indexing
 
-Only / (including its language query string) is indexable and appears in sitemap.xml. It uses index,follow in HTML and the HTTP header. German is default; English is ?lang=en with a root canonical. The homepage, navigation, sitemap and robots.txt do not link to the XING room.
+Every HTML page includes `noindex, nofollow, noarchive`. `.htaccess` additionally sets `X-Robots-Tag: noindex, nofollow, noarchive` on all Apache/LiteSpeed responses. `robots.txt` allows crawling so search engines can discover and respect the noindex directive; blocking crawling would prevent them from reading it. No sitemap is published.
 
-The XING route returns its German static HTML with noindex,nofollow,noarchive,nosnippet in HTML and HTTP headers, no-store and no-referrer. Direct index.html requests redirect to its clean URL. The child .htaccess adds a restrictive content security policy and disables caching. Other subpages retain noindex headers. These are requests to compliant crawlers, not authentication or a guarantee of removal from all search engines.
+These directives request exclusion from compliant search engines; the website remains publicly accessible. They are not access control. Pages previously indexed may take time to disappear; use the relevant search engine removal tools for urgent removals. Verify the noindex metadata and headers on the live Hostinger site after deployment, since static/CDN hosts may ignore `.htaccess`.
 
-robots.txt permits crawling so search engines can read noindex responses. The sitemap lists only the root. Old /de/, /en/, legacy HTML/PDF files and unlisted legacy routes return 410. Unknown room tokens fall through to the existing host-only handler, which returns 404 unless separately configured. The old site backup is backup-before-private-room-20261019; restoring it reopens old routes.
+## Brand assets and fonts
 
-The root indexing exception uses THE_REQUEST so it survives Apache's internal rewrite to index.html. Do not add a host-wide noindex override that also blocks the public root. A host-wide CDN cache must not override room no-store headers.
+The header, footer, dashboard, and favicon use the original Kickscale vector artwork retrieved from its public website. The original white wordmark is stored in `assets/logos/kickscale-white.svg`; the favicon at `assets/logos/kickscale-favicon.svg` uses its original symbol path and gradient. A distinct asset URL prevents reuse of the old cached favicon.
 
-## Optional host-only rooms
+Brand colors: navy `#030929`, turquoise `#2BCCC5`, yellow `#ECE338`, red `#FF3463`. Confirmed fonts: Poppins ExtraBold (800), Instrument Serif Regular (400) for turquoise accents, Inter Regular (400) for subtitles and body copy. Fonts are self-hosted with their licenses in `assets/fonts/`. No analytics, cookies, external asset requests, or third-party embeds are used.
 
-The existing private-room.php remains for separately configured rooms. It uses KICKSCALE_PRIVATE_DIR or a kickscale-private directory next to the document root, with a host-only rooms.json mapping route hashes to random HTML files. This mechanism is NOT used for the owner-approved repository-hosted XING page. Do not upload other customer data or credentials without authorization.
+## Trust Center content
 
-## Verification
+The 17-document library provides localized search and filtering, FAQs, Google Cloud hosting information for Frankfurt, and `datenschutz@kickscale.com`. Document entries open the supplied Notion Privacy Center because individual file URLs were not provided. See `trust-center-content-source.md` for provenance. An English overview does not imply that the original policy documents are available in English.
 
-Root: 200, index/follow, resource-hub-20261019-r2 header. XING route: 200, noindex, no-store, expected HTML build marker; both clean and trailing-slash routes work. Its explicit index.html route redirects to the clean URL. Wrong route: no room content. Previous public pages: 410. Root sitemap has no room URLs. Check fonts, logo, CSS, all outbound links and responsive layout.
+## Local development
 
-The committed files are deployment-ready; successful live checks, not just a commit, are required before calling a release verified live.
+Run `python3 -m http.server 8080` from the repository root. Directory-based routes work with trailing slashes; Apache/LiteSpeed is needed to exercise `.htaccess` redirects and response headers. Edit the static locale files directly; keep equivalent language pages and switches synchronized.
