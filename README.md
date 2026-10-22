@@ -38,3 +38,5 @@ The 17-document library provides localized search and filtering, FAQs, Google Cl
 ## Local development
 
 Run `python3 -m http.server 8080` from the repository root. Directory-based routes work with trailing slashes; Apache/LiteSpeed is needed to exercise `.htaccess` redirects and response headers. Edit the static locale files directly; keep equivalent language pages and switches synchronized.
+
+<!-- Hostinger publish trigger: 2026-10-22; no website content changes. -->
