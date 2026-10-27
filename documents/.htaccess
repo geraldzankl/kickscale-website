@@ -1,0 +1,15 @@
+# Add original approved PDFs to this directory using the prepared filenames.
+# Missing files must return an honest 404, not redirect to the Trust Center.
+Options -Indexes -MultiViews
+<IfModule mod_mime.c>
+  AddType application/pdf .pdf
+</IfModule>
+ErrorDocument 404 /documents/missing.html
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+  Header always set Referrer-Policy "no-referrer"
+  Header always set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.pdf$">
+    Header set Content-Disposition "inline"
+  </FilesMatch>
+</IfModule>
