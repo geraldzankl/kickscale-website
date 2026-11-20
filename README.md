@@ -41,3 +41,12 @@ No build step needed. All HTML is server-rendered by `index.php`. Keep the GitHu
 - Resources mega-menu and resources page link to the existing official Kickscale Blog, YouTube, Webinars, Events, Guides, ROI calculator, FAQ, Help Center, Research Hub article and locally maintained Release Notes. The articles displayed are real published content.
 - The customer stories section, pricing testimonials and homepage now render numeric case-study cards using the same single source array in `index.php`.
 - `resources.kickscale.si` is untouched.
+
+## Enterprise design v5 (2026-11-20)
+- Homepage hero uses the layered design concept from the owner-supplied reference, with responsive interactive five-capability tiles and explicit links to major integration families.
+- Success Stories navigation is a direct link (no submenu). Product mega-menu stacks its five pillars vertically. Secondary CTAs are transparent with high contrast.
+- The four prominent design-brief outcome figures are labelled as representative/indicative where no customer-backed source exists. Do not turn illustrative values into guaranteed or customer-reported results. Published customer cases remain the source for customer-specific proof.
+- Customer logo strip uses URLs identified from actual public brand images and has text fallbacks if third-party hosts reject hotlinks. Replace with licensed local originals when available.
+- Gina's portrait is sourced from a published Kickscale case. Martin, Frank and other people keep initials pending a directly accessible, approved photo; AI-generated faces from visual mockups are NOT genuine portraits and must not be used as real testimonials.
+- EU AI Act Ready is a readiness statement, not legal certification. ISO/GDPR claims link to the official canonical Trust Center.
+- Hostinger live publication cannot be inferred from a GitHub push; verify PHP hosting and DNS separately.

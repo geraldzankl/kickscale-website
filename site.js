@@ -24,6 +24,7 @@
     frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;frame.loading='eager';
     button.replaceWith(frame);
   }));
+  document.querySelectorAll('.customer-logo img').forEach(img=>img.addEventListener('error',()=>img.closest('.customer-logo')?.classList.add('logo-failed')));
   const lead=document.getElementById('lead-modal');
   const email=document.getElementById('work-email');
   const form=document.getElementById('lead-form');
