@@ -1,0 +1,40 @@
+{
+  "videos": [
+    {
+      "name": "Christian Weisbrodt",
+      "company": "finway",
+      "role": "CRO",
+      "title_de": "Weniger Follow-up-Aufwand, mehr Zeit für Kunden",
+      "title_en": "Less follow-up work, more time for customers",
+      "url": "",
+      "poster": ""
+    },
+    {
+      "name": "Daniela Bojahr",
+      "company": "ECDB",
+      "role": "Chief Revenue Officer",
+      "title_de": "Mehr Produktivität dank Gesprächsintelligenz",
+      "title_en": "More productivity from conversation intelligence",
+      "url": "",
+      "poster": ""
+    },
+    {
+      "name": "Sebastian Wengryn",
+      "company": "ContractHero",
+      "role": "CEO",
+      "title_de": "Kundenbedürfnisse statt Vermutungen",
+      "title_en": "Know customer needs rather than guess",
+      "url": "",
+      "poster": ""
+    },
+    {
+      "name": "Martin Beiganz",
+      "company": "Siteplan",
+      "role": "CEO",
+      "title_de": "Schnellere Follow-ups mit KI-Unterstützung",
+      "title_en": "Faster follow-ups with AI",
+      "url": "",
+      "poster": ""
+    }
+  ]
+}

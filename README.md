@@ -14,7 +14,7 @@ Built from the approved v2/v3 mockups. German at `/`, English at `/en/`. Respons
 - The **Book a demo** CTA sends visitors to the real Kickscale demo flow at `kickscale.com/demo` and `/en/demo`.
 - The **Explore platform** form only unlocks a link to the existing Kickscale product tour; it intentionally **does not store or send email**. Connect an approved HubSpot form/workflow before activating real lead capture. Do not claim leads are captured until verified.
 - The original product-tour video cannot be reproduced without its verified embed URL. Replace the modal's `data-video-url` or insert the exact official video embed once available.
-- The site ships a local transparent PNG crop of the original Kickscale wordmark from the approved reference image. Swap this for the official high-resolution SVG when available; do not reconstruct or recolor the mark.
+- The official original Kickscale negative SVG (`assets/kickscale-logo-negative.svg`) is restored from the previously committed Kickscale media asset. This is used in both the header and footer on navy backgrounds. The old PNG crop can remain in the repository for historical reference but is no longer used.
 - The site does not distribute fonts; CSS prefers the licensed Gellix/Reckless Neue if provisioned, otherwise Inter/Arial/Georgia fallbacks.
 - The Lime Connect image is sourced from the public Kickscale case study URL; external CDN access must be tested on production.
 
@@ -24,7 +24,20 @@ Built from the approved v2/v3 mockups. German at `/`, English at `/en/`. Respons
 - AI integrations such as MCP, Claude and n8n are presented with an explicit qualification, not as certified native integrations.
 - Site has no analytics scripts, trackers, embedded third-party video players or functioning PII collection. Add appropriate cookie consent/analytics only after privacy review.
 - Product visualization is an illustrated mockup, not an actual product screenshot. Case quote comes from the public customer story. Avoid fake portraits or attributed outcomes.
-- Case cards besides Lime Connect currently link to Kickscale's public customer-story overview until exact individual URLs and media releases are confirmed.
+- Case cards use verified published Kickscale KPIs and deep links: Lime Connect (195 days/year), Cropster (+40% meeting-quality scores), Octonomy (-80% administration), Placetel (1-2 hours per rep/day), Finmatics (10% seller time savings), finway (60-80% follow-up admin reduction). Named speakers are attributed from published stories. Only Gina Marie Lazzaro has an exact, previously published Kickscale portrait URL. Other cards use clearly decorative initials; do not replace them with stock or AI-generated fake portraits.
 
 ## Code
 No build step needed. All HTML is server-rendered by `index.php`. Keep the GitHub repository private if confidential material is later added; this release contains only customer-facing material.
+
+## Raving Fans videos (no developer required)
+- DE: `/erfolgsgeschichten/raving-fans` · EN: `/en/customer-stories/raving-fans`
+- **Edit only `data/raving-fans.json`.** Four customer examples are preconfigured, but their `url` fields are intentionally empty because approved video URLs have not been verified.
+- Paste an approved YouTube or Vimeo URL into the matching `url` field and commit the JSON. The video card will then appear automatically.
+- Supported URLs: `https://www.youtube.com/watch?v=VIDEOID`, `https://youtu.be/VIDEOID`, `https://vimeo.com/VIDEOID`. Video playback loads a privacy-friendly player **only after the visitor clicks Play**.
+- Replace `title_de`, `title_en`, `name`, `company`, `role` and optionally `poster` per video. The poster should be a legitimately approved image URL (not a stock person masquerading as the customer).
+- Until real videos are added, visitors see a respectful placeholder and short summaries of published customer statements. Never show a fake play button implying a video exists.
+
+## Resources and proof updates
+- Resources mega-menu and resources page link to the existing official Kickscale Blog, YouTube, Webinars, Events, Guides, ROI calculator, FAQ, Help Center, Research Hub article and locally maintained Release Notes. The articles displayed are real published content.
+- The customer stories section, pricing testimonials and homepage now render numeric case-study cards using the same single source array in `index.php`.
+- `resources.kickscale.si` is untouched.

@@ -14,6 +14,16 @@
   document.addEventListener('click',e=>{if(!e.target.closest('.site-nav'))closeMenus();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenus();closeModal();mobileDrawer?.setAttribute('aria-hidden','true');mobileButton?.setAttribute('aria-expanded','false');}});
   mobileButton?.addEventListener('click',()=>{const open=mobileButton.getAttribute('aria-expanded')!=='true';mobileButton.setAttribute('aria-expanded',String(open));mobileDrawer?.setAttribute('aria-hidden',String(!open));});
+
+  // Privacy-friendly video embeds: no third-party player is loaded until someone clicks Play.
+  document.querySelectorAll('[data-video-src]').forEach(button=>button.addEventListener('click',()=>{
+    const url=button.getAttribute('data-video-src');
+    if(!url||!(url.startsWith('https://www.youtube-nocookie.com/embed/')||url.startsWith('https://player.vimeo.com/video/')))return;
+    const frame=document.createElement('iframe');frame.src=url;frame.title=button.getAttribute('aria-label')||'Customer interview';
+    frame.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+    frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;frame.loading='eager';
+    button.replaceWith(frame);
+  }));
   const lead=document.getElementById('lead-modal');
   const email=document.getElementById('work-email');
   const form=document.getElementById('lead-form');
