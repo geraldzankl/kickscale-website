@@ -256,3 +256,6 @@
   #menu-product .menu-aux-copy small {font-size:8px;}
   #menu-product .menu-aux-arrow {display:none;}
 }
+/* Menu icon sizing safety guard: scoped to Product shortcuts; avoids SVG intrinsic sizing with stale browser styles. */
+#menu-product .menu-aux .menu-aux-card .menu-aux-icon{display:flex;align-items:center;justify-content:center;width:31px;height:31px;min-width:31px;max-width:31px;flex:0 0 31px;overflow:hidden}
+#menu-product .menu-aux .menu-aux-card .menu-aux-icon svg{display:block;width:20px;height:20px;min-width:20px;max-width:20px;min-height:20px;max-height:20px;flex:0 0 20px}
