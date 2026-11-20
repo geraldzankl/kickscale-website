@@ -40,7 +40,7 @@ $stories=[
  ['company'=>'Lufthansa City Center','tag'=>'Travel & Hospitality','metric'=>'Insights','unit'=>t('Kundenfeedback','customer intelligence'), 'title'=>t('Aus langen Partnergesprächen Markt-Insights gewinnen','Find market insights in partner calls'),'link'=>'https://www.kickscale.com/erfolgsgeschichten']
 ];
 if ($page === 'notfound') { http_response_code(404); header('X-Robots-Tag: noindex, nofollow'); }
-$brandLogo='https://cdn.prod.website-files.com/681deae4ef3bee083b077525/685c7609f42a8c81ab18a84a_ac087c988ef83269cd9ff7ac90da7af5_kickscale%20Logo.svg';
+$brandLogo='/assets/kickscale-logo.png';
 $legalUrl=$lang==='de'?'https://kickscale.com/legal':'https://kickscale.com/en/legal';
 $demoUrl=$lang==='de'?'https://www.kickscale.com/demo':'https://www.kickscale.com/en/demo';
 $videoUrl=$lang==='de'?'https://www.kickscale.com/':'https://www.kickscale.com/en';

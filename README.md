@@ -14,7 +14,7 @@ Built from the approved v2/v3 mockups. German at `/`, English at `/en/`. Respons
 - The **Book a demo** CTA sends visitors to the real Kickscale demo flow at `kickscale.com/demo` and `/en/demo`.
 - The **Explore platform** form only unlocks a link to the existing Kickscale product tour; it intentionally **does not store or send email**. Connect an approved HubSpot form/workflow before activating real lead capture. Do not claim leads are captured until verified.
 - The original product-tour video cannot be reproduced without its verified embed URL. Replace the modal's `data-video-url` or insert the exact official video embed once available.
-- Original Kickscale logo is referenced from Kickscale's official Webflow CDN SVG (no reconstructed wordmark). For reliability, mirror the approved SVG locally when asset download is available.
+- The site ships a local transparent PNG crop of the original Kickscale wordmark from the approved reference image. Swap this for the official high-resolution SVG when available; do not reconstruct or recolor the mark.
 - The site does not distribute fonts; CSS prefers the licensed Gellix/Reckless Neue if provisioned, otherwise Inter/Arial/Georgia fallbacks.
 - The Lime Connect image is sourced from the public Kickscale case study URL; external CDN access must be tested on production.
 
